@@ -1,0 +1,82 @@
+html {
+  background: url(ny-bw.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body{
+  background-color: transparent;
+}
+
+.top-row{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.title{
+  font-size: 20px;
+  color: white;
+}
+
+.logo-small{
+  height: 40px;
+/*   border-radius: %; */
+}
+
+.about-container{
+  text-align:right;
+}
+.about{
+  text-align: right;
+  font-size: 16px;
+  vertical-align: middle;
+  color: white;
+/*   background-color: rgba(0,0,0,.5);
+  border: 3px solid rgba(0,0,0,.05); */
+  line-height: 200%;
+}
+
+.about:hover,
+.about:focus{
+  color: grey;
+  text-decoration: none;
+  outline: 0;
+  flow-into: none;
+}
+
+.container{
+  background: transparent;
+}
+
+.logo {
+  width: 200px;
+
+}
+
+.center{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.logo-container{
+  margin: 100px;
+  margin-bottom: 10px;
+}
+
+.image-form-text{
+  font-size: 16px;
+  /* background-color: lightblue; */
+  background-color: rgba(0,0,0,.5);
+  /* border: 3px solid lightblue; */
+  color: white;
+  border: 3px solid rgba(0,0,0,.05);
+  line-height: 200%;
+}
+
+.image-form-text-container{
+  margin: 20px;
+}
+.link-button{
+  margin: 15px;
+}

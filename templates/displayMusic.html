@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel= "stylesheet" href= "{{ url_for('static',filename='css/style.css') }}">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- <script src = "script.js"></script> -->
+</head>
+
+<body>
+
+  <div class = "container">
+    <div class = "row top-row">
+      <div class = "col-md-3 col-sm-4 col-lg-3"><a href = "https://surround-sound-app.herokuapp.com/"><img class = "logo" src = "{{ url_for('static',filename='images/sslogosmall.jpg') }}"></a></div>
+      <!-- <span class = "title">Surround Sound</span> -->
+      <div class = "about-container col-md-3 col-sm-4 col-lg-3 pull-right"><a class = "about" href ="https://devpost.com/software/surround-sound">About this App</a></div>
+    </div>
+
+    <div class="row main-section">
+
+      <div class="col-md-5 col-sm-12 col-lg-5">
+        <div class = "center left-section">
+            <div class = "center">
+              <div class = "image-cropper">
+                <img src = {{ imageLink }} class = "img center" style = "vertical-align: middle;">
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-md-7 col-sm-9 col-lg-7">
+        <div class = "right-section">
+          <div class = "center words">
+            <div class = "right-text">
+              <p><span class = "highlighted-text">We've tagged your environment with the following: </span></p>
+            </div>
+            <!-- <p> We've detected that your environment consists of: </p>
+            {% for tag in tags %}
+            <p>{{ tag }}</p>
+            {% endfor %} -->
+            <div class = "tags">
+              {% for tag in tags %}
+              <span class = "image-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+
+            <div class = "right-text generated-title center">
+              <span class = "highlighted-text">so we generated a</span>
+            </div>
+
+            <div class = "genreMoodContainer">
+              <span class = "genreMood">{{genreMood}}</p>
+            </div>
+
+            <div class = "right-text playlist-title">
+              <span class = "highlighted-text">playlist for you</span>
+            </div>
+
+            <div class = "spotify-button">
+              <a href="{{spotifyLink}}"><p><button type="button" class="btn btn-success">Play!</button></p></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Surround Sound</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel= "stylesheet" href= "{{ url_for('static',filename='css/home.css') }}">
+    <link rel= "stylesheet" href= "{{ url_for('static',filename='css/style.css') }}">
+  </head>
+   <body>
+
+      <div class = "container center">
+
+        <div class = "row top-row">
+          <div class = "col-md-3 col-sm-4 col-lg-3"><a href = "https://surround-sound-app.herokuapp.com/"><img class = "logo-small" src = "{{ url_for('static',filename='images/sslogosmall.jpg') }}"></a></div>
+          <!-- <span class = "title">Surround Sound</span> -->
+          <div class = "about-container col-md-3 col-sm-4 col-lg-3 pull-right"><a class = "about" href ="https://devpost.com/software/surround-sound">About this App</a></div>
+        </div>
+
+        <div class = "logo-container">
+          <a href = #><img class = "logo" src = "{{ url_for('static',filename='images/ss-logo.png') }}"></a>
+        </div>
+      </div>
+
+      <div class = "container image-form-container center">
+        <div class = "image-form-text-container"><span class = "image-form-text">Enter a link of your image, and we'll generate you a playlist!</span></div>
+       <form method="post">
+           <div class="form-group">
+              <input type="text" name = "imageLink" class="form-control" id="formGroupExampleInput" placeholder="Image Link">
+              <button type="submit" value="generateLink" class="btn btn-success mb-2 link-button">Generate!</button>
+            </div>
+       </form>
+
+      </div>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   </body>
+</html>
