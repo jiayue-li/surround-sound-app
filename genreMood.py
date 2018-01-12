@@ -23,7 +23,7 @@ playlists = {"hiphop": "https://open.spotify.com/user/spotify/playlist/37i9dQZF1
 "neutral": ["https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWTkxQvqMy4WW", "https://open.spotify.com/user/kristitalbott/playlist/39ysfhYS5guAY5sP8UqSkJ", "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DWUNIrSzKgQbP", "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX7K31D69s4M1", "https://open.spotify.com/user/myplay.com/playlist/2wW2k1Hu2WeEDKvdOMyxzT", "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX1s9knjP51Oa", "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX4E3UdUs7fUx"],
 "sadness": ["https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX7gIoKXt0gmx"],
 "surprise": ["https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXca8AyWK6Y7g"],
-"calm": ["https://upload.wikimedia.org/wikipedia/commons/b/b5/St._Peter_and_St._Paul%27s_Church_1%2C_Vilnius%2C_Lithuania_-_Diliff.jpg"]}
+"calm": ["https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX4WYpdgoIcn6"]}
 
 def determinePlaylist(toneWord):
     if toneWord in playlists:
