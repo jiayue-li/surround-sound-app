@@ -1,6 +1,6 @@
 ########### Python 3.6 #############
 import http.client, urllib.request, urllib.parse, urllib.error, base64, json
-# import requests
+import requests
 
 ###############################################
 #### Update or verify the following values. ###
