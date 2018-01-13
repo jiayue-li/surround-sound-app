@@ -36,10 +36,6 @@
             <div class = "right-text">
               <p><span class = "highlighted-text">We've tagged your environment with the following: </span></p>
             </div>
-            <!-- <p> We've detected that your environment consists of: </p>
-            {% for tag in tags %}
-            <p>{{ tag }}</p>
-            {% endfor %} -->
             <div class = "tags">
               {% for tag in tags %}
               <span class = "image-tag">{{ tag }}</span>
@@ -59,7 +55,15 @@
             </div>
 
             <div class = "spotify-button">
-              <a href="{{spotifyLink}}"><p><button type="button" class="btn btn-success">Play!</button></p></a>
+              <!-- <a href={{spotifyLink}}><p><button type="button" class="btn btn-success">Play!</button></p></a> -->
+              <!-- <form action="http://google.com">
+                  <input type="submit" value="Go to Google" />
+              </form> -->
+              <form action= {{spotifyLink}}>
+                  <div class="form-group">
+                     <button type="submit" class="btn btn-success">Play!</button>
+                   </div>
+              </form>
             </div>
           </div>
         </div>

@@ -19,6 +19,7 @@ def music(imageLink):
         tags = info["imageDescriptions"]
         genreMood = info["toneWord"]
         spotifyLink = info["playlist"]
+        print(spotifyLink)
         return render_template('displayMusic.html', tags=tags, imageLink = imageLink, genreMood = genreMood,spotifyLink=spotifyLink)
     else:
         return render_template('home.html')

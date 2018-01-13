@@ -1,4 +1,4 @@
-from backend.wordToMood import *
+from backend.data import *
 import random
 
 # def determineTopic():
@@ -11,7 +11,7 @@ import random
 def determineMusic(tags):
     result = determineGenreOrMood(tags)
     if (result == None):
-        return "hiphop"
+        return "pop"
     return result
 
 def determineGenreOrMood(tags):

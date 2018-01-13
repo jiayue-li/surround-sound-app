@@ -19,7 +19,7 @@ body {
 }
 .top-row{
   margin-top: 20px;
-  margin-left: 10px;
+  margin-left: 0px;
 }
 .title{
   font-size: 20px;
@@ -101,6 +101,14 @@ body {
   background-color: lightblue;
   border: 3px solid lightblue;
   line-height: 200%;
+}
+
+.image-tag:hover,
+.image-tag:focus{
+  color: white;
+  text-decoration: none;
+  outline: 0;
+  flow-into: none;
 }
 
 .tags{

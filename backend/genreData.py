@@ -1,19 +1,20 @@
-genres = ["hiphop", "pop", "popculture", "country", "workout", "chill", "electronic", "rock", "focus", "religious", "indie", "outside"]
+genres = ["hiphop", "pop", "popculture", "country", "workout", "chill", "electronic", "rock", "focus", "religious", "indie", "outside", "country"]
 moods = ["happy", "calm", "love", "sad", "angry", "confident"]
 
-hiphop = {"hiphop": ["urban", "city", "rap", "culture", "populous", "downtown", "ghetto"]}
-pop = {"pop": ["happy", "young", "party", "festival", "group", "bright"]}
+hiphop = {"hiphop": ["urban", "city", "rap", "culture", "populous", "downtown", "ghetto", "building", "skyscraper"]}
+pop = {"pop": ["happy", "young", "party", "festival", "group", "bright", "outside", "colorful"]}
 popculture = {"popculture": ["media", "phone", "app", "art", "celebrity", "famous", "text", "internet"]}
 workout = {"workout": ["gym", "workout", "exercise", "weight", "run", "running", "cycling"]}
-chill = {"chill": ["relaxed", "study", "couch", "sitting", "sleep", "bed"]}
+chill = {"chill": ["relaxed", "study", "couch", "sitting", "sleep", "bed", "book", "lamp"]}
 electronic = {"electronic": ["lights", "colors", "excited", "populous", "crowd"]}
 rock = {"rock": ["angry", "guitar", "city", "black", "anger", "drums"]}
-focus = {"focus": ["study", "paper", "pencil", "desk", "lamp", "light", "writing", "computer", "laptop", "book", "student"]}
+focus = {"focus": ["study", "paper", "pencil", "desk", "lamp", "light", "writing", "computer", "laptop", "book", "student", "glasses"]}
 religious = {"religious": ["church", "praying", "christian", "holy"]}
 indie = {"indie": ["new", "young", "art", "record", "hipster"]}
+country = {"country": ["outside", "nature", "road", "truck", "outdoor", "path", "dirt", "highway"]}
 
 genreMappings = {"hiphop": hiphop, "pop": pop, "popculture": popculture, "workout": workout,
-"chill": chill, "electronic": electronic, "rock": rock, "focus": focus, "religious": religious, "indie": indie}
+"chill": chill, "electronic": electronic, "rock": rock, "focus": focus, "religious": religious, "indie": indie, "country": country}
 
 happy = {"happy": ["happy", "sun", "bright", "yellow", "smile", "beautiful", "outside", "food", "eating"]}
 calm = {"calm": ["study", "work", "relaxed", "chill", "sleep", "slow", "nature", "water", "night", "dark"]}
@@ -26,7 +27,7 @@ moodMappings = {"happy": happy, "calm": calm, "love": love, "sad": sad, "angry":
 
 moodToPlaylist = {"anger": ["Life Sucks", "Down in The Dump", "Breakup Songs", "Alone Again"], "contempt": ["Alone Again", "Down In The Dump", "Breakup Songs"], "disgust": ["Breakup Songs", "Swagger"], "fear": ["Confidence Boost"], "happiness": ["Soak Up The Sun", "Happy Folk", "Songs to Sing in the Shower", "Good Vibes", "Have a Great Day!", "Happy Hits!", "Feelin' Good", "Young & Free"], "neutral": ["Chillin' On a Dirt Road", "Relax & Unwind", "Autumn Acoustic", "Piano in the Background", "Fall Feels", "Calm Vibes", "Afternoon Acoustics"], "sadness": ["All The Feels"], "surprise": ["Young & Free", "Mood Booster"]}
 
-Genretoplaylist = {"hiphop": ["Hip-Hop"], "pop" : ["Pop"]. "popculture":["Pop Culture"], "country": ["Culture"], "workout": ["workout", "Electronic/Dance"], "chill": ["Christian"], "electronic": ["Electronic/Dance"], "rock": ["Rock", "R&B"], "focus": ["Jazz"], "religious": ["Christian"], "indie": [], "outside": ["Jazz", "Travel", "Blues"]}
+Genretoplaylist = {"hiphop": ["Hip-Hop"], "pop" : ["Pop"], "popculture":["Pop Culture"], "country": ["Culture"], "workout": ["workout", "Electronic/Dance"], "chill": ["Christian"], "electronic": ["Electronic/Dance"], "rock": ["Rock", "R&B"], "focus": ["Jazz"], "religious": ["Christian"], "indie": [], "outside": ["Jazz", "Travel", "Blues"]}
 
 
 vocabDict = {}
@@ -39,11 +40,10 @@ def createMappings(vocabDict, vocab):
         genreWords = genreMappings[genreKey][genreKey]
         for word in genreWords:
             if word not in vocab:
-
                 vocab.add(word)
                 vocabDict[word] = {"hiphop": 0, "pop": 0, "popculture": 0, "workout": 0,
                 "chill": 0, "electronic": 0, "rock": 0, "focus": 0, "religious": 0, "indie": 0,
-                "happy": 0, "calm": 0, "love": 0, "sad": 0, "angry": 0, "confident": 0}
+                "happy": 0, "calm": 0, "love": 0, "sad": 0, "angry": 0, "confident": 0, "country": 0}
             # print(vocabDict[word])
             # print(genreKey)
             # print(vocabDict[word][genreKey])
@@ -63,4 +63,5 @@ def createMappings(vocabDict, vocab):
     return (vocabDict, vocab)
 
 d, v = createMappings(vocabDict, vocab)
-print(d)
+with open("data.json", 'w') as data:
+    data.write(str(d))

@@ -1,6 +1,6 @@
 from backend.topicAlgo import determineGenreOrMood
-from backend.testmicrosoftazure import analyze_tone
-from backend.testmicrosoftazure import getToneWords
+from backend.imageTagger import analyze_tone
+from backend.imageTagger import getToneWords
 
 playlists = {"hiphop": "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX0XUsuxWHRQd",
 "pop": "https://open.spotify.com/user/spotify/playlist/37i9dQZF1DXcBWIGoYBM5M",
@@ -33,10 +33,11 @@ def determinePlaylist(toneWord):
 
 def main(url):
     toneWords = getToneWords(url)
-    #print(eval(toneWords)['description'])
-    print(toneWords)
+    # print(toneWords)
     toneWord = determineGenreOrMood(toneWords)
-    print(toneWord)
+    # print(toneWord)
+    if not toneWord:
+        toneWord = "pop"
     playlist = determinePlaylist(toneWord)
     info = {"imageDescriptions": toneWords, "toneWord": toneWord, "playlist": playlist}
     return info

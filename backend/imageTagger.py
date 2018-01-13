@@ -14,6 +14,7 @@ def analyze_tone(text):
     try:
         r = requests.post(watsonUrl, auth=(username,password),headers = headers,
          data=data)
+        print("R:" + r.text)
         return r.text
     except:
         return False
@@ -46,7 +47,7 @@ def getToneWords(url):
 
     # Replace the three dots below with the URL of a JPEG image of a celebrity.
     body = "{'url':'" + url + "'}"
-    print("BODY " + body)
+    # print("BODY " + body)
     try:
         # Execute the REST API call and get the response.
         conn = http.client.HTTPSConnection('westcentralus.api.cognitive.microsoft.com')
@@ -58,19 +59,21 @@ def getToneWords(url):
         parsed = json.loads(data)
         # print ("Response:")
         # print (json.dumps(parsed, sort_keys=True, indent=2))
-        print(parsed)
+        # print(parsed)
         tags = parsed["description"]["tags"]
-        print("TAGS: ")
-        print(tags)
+        # print("TAGS: ")
+        # print(tags)
         caption = parsed['description']['captions'][0]['text']
-        print(caption)
+        # print(caption)
 
         stringTags = ""
         for tag in tags:
             stringTags = stringTags + tag + " "
         stringTags += caption
-        print(stringTags)
+        # print(stringTags)
         results = analyze_tone(stringTags)
+        print(results)
+        #? ?????? ????? ?
         if results != False:
             parsed = json.loads(results)
             print(parsed["document_tone"]['tones'][0]['tone_name'])
