@@ -32,6 +32,7 @@ def determineGenreOrMood(tags):
     for genre in genreToWord:
         if genreToWord[genre] == biggestVal:
             biggestGenre.append(genre)
+    print(biggestGenre)
     if (len(genreToWord) == 0):
         return None
     return random.choice(biggestGenre)
