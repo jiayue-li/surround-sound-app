@@ -25,6 +25,14 @@ def music(imageLink):
         return render_template('home.html')
         # return render_template('link.html', spotifyLink=spotifyLink)
 
+@app.route('/images/<imageName>')
+def imageURL(imageName):
+    images = ["concert-sample.jpg", "empty-road-sample.jpg", "nightlife-sample.jpg", "studying-sample.jpg", "sunrise-sample.jpg"]
+    if imageName in images:
+        return render_template('sampleimage.html', imageName=imageName)
+    else:
+        return render_template('home.html')
+
 @app.route('/test')
 def test():
     tags = ["a", "b", "c"]
