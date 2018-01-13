@@ -33,6 +33,8 @@ def determinePlaylist(toneWord):
 
 def main(url):
     toneWords = getToneWords(url)
+    if not toneWords:
+        return "Error"
     # print(toneWords)
     toneWord = determineGenreOrMood(toneWords)
     # print(toneWord)

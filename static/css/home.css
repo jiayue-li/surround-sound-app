@@ -60,7 +60,7 @@ body{
 }
 
 .logo-container{
-  margin: 100px;
+  margin: 50px;
   margin-bottom: 10px;
 }
 
@@ -79,4 +79,27 @@ body{
 }
 .link-button{
   margin: 15px;
+}
+
+.sample-image{
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+.image-cropper{
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  display: inline-block;
+  max-width: 98%;
+  margin: 1%;
+  overflow: hidden;
+}
+.samples{
+  /* display: inline-block; */
+  margin-top: -20px;
 }

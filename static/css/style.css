@@ -105,7 +105,7 @@ body {
 
 .image-tag:hover,
 .image-tag:focus{
-  color: white;
+  /* color: white; */
   background-color: #DFFFFF;
   border: 3px solid #DFFFFF;
   text-decoration: none;
@@ -132,7 +132,7 @@ body {
 
 .genreMood:hover,
 .genreMood:focus{
-  color: white;
+  /* color: white; */
   background-color: #DFFFFF;
   border: 3px solid #DFFFFF;
   text-decoration: none;
