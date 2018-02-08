@@ -7,7 +7,7 @@ import requests
 ###############################################
 
 def analyze_tone(text):
-    username = 'df2b64b3-62e3-4bce-81b7-4d9e6a033fdc'
+    username = 'bdd51d913e5448fba608535bc7874263'
     password = 'Ml46ZGhmHmlJ'
     watsonUrl = 'https://gateway.watsonplatform.net/tone-analyzer/api/v3/tone?version=2017-09-21'
     headers = {"content-type": "text/plain"}
